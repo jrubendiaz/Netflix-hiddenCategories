@@ -1,9 +1,9 @@
 /* We will use the endpoint json file generated previusly by categories.php as data source */
-const endpoint = 'http://www.airforcechallenge.es/js/categories.json';
+const endpoint = 'https://raw.githubusercontent.com/jrubendiaz/Netflix-hiddenCategories/master/js/categories.json';
 
 /* Initialize and format the data in order to use them */
 const categories = [];
-fetch(endpoint, {mode: 'no-cors'})
+fetch(endpoint)
     .then(blob => blob.json())
     .then(data => {
         data.forEach(cat =>{
